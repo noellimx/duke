@@ -4,7 +4,6 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-
       - run: echo "Event - ${{ github.event_name }}"
       - run: echo "Runner ${{ runner.os }}"
       - run: echo "The name of your branch - ${{ github.repository }}/${{ github.ref }}"
