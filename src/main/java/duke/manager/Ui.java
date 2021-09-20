@@ -1,4 +1,4 @@
-package duke.coronet.manager;
+package duke.manager;
 
 
 import java.io.PrintStream;
@@ -7,14 +7,14 @@ import java.io.PrintStream;
 /**
  * Handles terminal display.
  */
-public class UxManager {
+public class Ui {
 
     private PrintStream _out;
 
-    private UxManager() {
+    private Ui() {
     }
 
-    public UxManager(PrintStream ps) {
+    public Ui(PrintStream ps) {
         this.setPrintStream(ps);
     }
 
@@ -25,7 +25,7 @@ public class UxManager {
         this._out = ps;
     }
 
-    public UxManager printEntryMessage() {
+    public Ui printEntryMessage() {
         String logo = " _                   _                                _             \n"
                 + "| |                 | |                              | |                \n"
                 + "| |_    __ _   ___  | | __  _ __ ___     __ _   ___  | |_    ___   _ __ \n"

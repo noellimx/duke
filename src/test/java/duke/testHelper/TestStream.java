@@ -1,4 +1,4 @@
-package duke.coronet.testHelper;
+package duke.testHelper;
 
 import org.junit.After;
 import org.junit.Before;

@@ -1,4 +1,4 @@
-package duke.coronet.testHelper.help;
+package duke.testHelper.help;
 
 public class OutputUnderTest {
     private static String LOGO = " _                   _                                _             "

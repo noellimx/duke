@@ -12,7 +12,7 @@ Run entry points of project stages.
 ## Incremental
 - [Level 0. Greet](https://nus-tic2002-2021.github.io/website/se-book-adapted/projectDuke/index.html#level-0-greet) \
   Entry Point: ```duke.coronet.orchestra.OrchestratorLevel00.main()``` \
-  Test: ```duke.coronet.level.Increment_00_Test```
+  Test: ```Increment_00_Test```
 
 
 
