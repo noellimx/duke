@@ -4,9 +4,11 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Event - ${{ github.event_name }}"
-      - run: echo "Runner ${{ runner.os }}"
-      - run: echo "The name of your branch - ${{ github.repository }}/${{ github.ref }}"
+      - name: Environment
+        run: |
+            echo "Event - ${{ github.event_name }}"
+            echo "Runner ${{ runner.os }}"
+            echo "The name of your branch - ${{ github.repository }}/${{ github.ref }}"
       - name: checkout
         uses: actions/checkout@v2
       - name: Install JDK
@@ -14,14 +16,7 @@ jobs:
         with:
           java-version: '14'
           distribution: 'adopt'
-      - name: Install Maven
-        run: |
-          curl -sL https://www-eu.apache.org/dist/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.zip -o maven.zip
-          sudo apt-get update
-          sudo apt-get -y install unzip
-          unzip -d /usr/share maven.zip
-          rm maven.zip
-          sudo ln -s /usr/share/apache-maven-3.6.3/bin/mvn /usr/bin/mvn
-          echo "M2_HOME=/usr/share/apache-maven-3.6.3" | tee -a /etc/environment
-      - run: ./run-deployment-test.sh
-      - run: echo "🍏 This job's status is ${{ job.status }}."
+      - name: Run deployment test using maven
+        run: ./run-deployment-test.sh
+      - name: After run status
+        run: echo "🍏 This job's status is ${{ job.status }}."
