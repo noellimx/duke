@@ -2,7 +2,7 @@
 
 package duke.level;
 
-import duke.manager.Ui;
+import duke.Ui;
 import duke.testHelper.TestStream;
 import duke.testHelper.help.OutputUnderTest;
 import org.junit.jupiter.api.Test;

@@ -13,7 +13,6 @@ public class OutputUnderTest {
             + System.lineSeparator()
             + " \\__|  \\__,_| |___/ |_|\\_\\ |_| |_| |_|  \\__,_| |___/  \\__|  \\___| |_|  "
             + System.lineSeparator();
-
     public static String getMsgUnderTestEntry() {
         return "Hello from" + System.lineSeparator() + LOGO;
     }

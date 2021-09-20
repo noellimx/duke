@@ -1,4 +1,4 @@
-package duke.manager;
+package duke;
 
 
 import java.io.PrintStream;
