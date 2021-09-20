@@ -1,7 +1,11 @@
 #!/bin/sh
 
+
+rm -rf target
+
 mvn install
 mvn compile
+mvn test
 mvn package
 
-java -jar target/Dukey.jar
+java -jar target/Duke.jar
