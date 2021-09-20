@@ -15,6 +15,6 @@ Run entry points of project stages.
 
 # Run
 
-```./run.sh``` Test
+```./run-deployment-test.sh``` Test
 
 
