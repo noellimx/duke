@@ -17,11 +17,11 @@ jobs:
       - name: Install Maven
         run: |
           curl -sL https://www-eu.apache.org/dist/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.zip -o maven.zip
-          apt-get update
-          apt-get -y install unzip
+          sudo apt-get update
+          sudo apt-get -y install unzip
           unzip -d /usr/share maven.zip
           rm maven.zip
-          ln -s /usr/share/apache-maven-3.6.3/bin/mvn /usr/bin/mvn
+          sudo ln -s /usr/share/apache-maven-3.6.3/bin/mvn /usr/bin/mvn
           echo "M2_HOME=/usr/share/apache-maven-3.6.3" | tee -a /etc/environment
       - run: ./run-deployment-test.sh
       - run: echo "🍏 This job's status is ${{ job.status }}."
