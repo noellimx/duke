@@ -1,10 +1,13 @@
 package duke.testHelper;
 
-import org.junit.After;
-import org.junit.Before;
+
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class TestStream {
 
@@ -32,13 +35,13 @@ public class TestStream {
         return this.outputStreamCaptor.toString();
     }
 
-    @Before
+    @BeforeEach
     public void setOutputStream() {
         this.setOutputStreamCaptor(new ByteArrayOutputStream());
         this.setPrintStream(new PrintStream(this.getOutputStreamCaptor()));
     }
 
-    @After
+    @AfterEach
     public void unsetStreams() {
         this.setOutputStreamCaptor(null);
         this.setPrintStream(null);

@@ -5,9 +5,9 @@ package duke.level;
 import duke.manager.Ui;
 import duke.testHelper.TestStream;
 import duke.testHelper.help.OutputUnderTest;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * Implement an initial skeletal version of the Duke that simply greets the user and exits.
