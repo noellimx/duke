@@ -15,6 +15,6 @@ Run entry points of project stages.
 
 # Run
 
-```./run-deployment-test.sh``` Test
-
-
+```./run-deployment-test.sh``` package and test
+```./target/Duke.jar``` generated jar
+```java -jar ./taget/Duke.jar``` run package
