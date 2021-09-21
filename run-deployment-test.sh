@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# Github Action or act
+
 # clean build dir
 rm -rf target
 
